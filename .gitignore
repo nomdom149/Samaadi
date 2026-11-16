@@ -5,3 +5,9 @@ npm-debug.log*
 .idea/
 *.swp
 Thumbs.db
+
+# Fichiers médias lourds — hébergés en externe
+*.mp4
+*.mov
+*.m4v
+*.webm
