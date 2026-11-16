@@ -41,8 +41,27 @@
           "url": "https://samaadi.be"
         },
         "datePublished": "2024-11-01T08:00:00+01:00",
-        "dateModified": "2024-11-01T08:00:00+01:00",
+        "dateModified": "2026-11-16T00:00:00+01:00",
         "mainEntityOfPage": "https://samaadi.be/blog/machine-cafe-philips-s5400/"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Le rituel du café du matin à Samaâdi — Philips Series 5400",
+        "description": "Le rituel du café grain-à-grain à Samaâdi, La Roche-en-Ardenne : la Philips Series 5400 en action — broyeur, LatteGo, latte art.",
+        "thumbnailUrl": "https://samaadi.be/blog/machine-cafe-philips-s5400/cover-reel.png",
+        "contentUrl": "https://samaadi.be/blog/machine-cafe-philips-s5400/reel_samaadi_cafe.mp4",
+        "uploadDate": "2026-11-16T00:00:00+01:00",
+        "duration": "PT16S",
+        "author": {
+          "@type": "Person",
+          "name": "Samaâdi",
+          "url": "https://samaadi.be"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Samaâdi",
+          "url": "https://samaadi.be"
+        }
       },
       {
         "@type": "Product",
@@ -294,6 +313,33 @@
       color: var(--amber);
     }
 
+    /* Encart vidéo reel vertical */
+    .article-reel {
+      margin: var(--space-16) auto;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .article-reel video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+      background: #1a1008;
+    }
+
+    .article-reel figcaption {
+      margin-top: var(--space-3);
+      font-size: 12px;
+      color: var(--ink-muted);
+      letter-spacing: 0.04em;
+      font-style: italic;
+      text-align: center;
+    }
+
     @media (max-width: 768px) {
       .article-header {
         padding: var(--space-10) var(--space-6) var(--space-8);
@@ -436,6 +482,25 @@
       <p>
         Pour une maison ou un appartement où le café est un moment plutôt qu'une simple fonction, c'est une machine que je recommande sans hésitation.
       </p>
+
+
+      <!-- Vidéo — le rituel du café en images -->
+      <figure class="article-reel">
+        <video
+          src="reel_samaadi_cafe.mp4"
+          poster="cover-reel.png"
+          preload="none"
+          playsinline
+          muted
+          loop
+          controls
+          aria-label="Le rituel du café du matin à Samaâdi — Philips Series 5400 en action"
+          title="Le rituel du café grain-à-grain à Samaâdi, Ardennes"
+        >
+          Votre navigateur ne prend pas en charge la lecture vidéo.
+        </video>
+        <figcaption>Le rituel du matin à Samaâdi — café grain-à-grain avec la Philips Series 5400, La Roche-en-Ardenne.</figcaption>
+      </figure>
 
 
       <!-- Encart produit avec lien affilié Amazon -->
