@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO primaire -->
+  <title>Samaâdi — Une maison habitée à La Roche-en-Ardenne</title>
+  <meta name="description" content="Samaâdi est une maison singulière à La Roche-en-Ardenne. Un espace pensé pour le silence, la création et la présence. Je vous raconte ce que j'y construis.">
+  <meta name="author" content="Samaâdi">
+  <link rel="canonical" href="https://samaadi.be/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samaadi.be/">
+  <meta property="og:title" content="Samaâdi — Une maison habitée à La Roche-en-Ardenne">
+  <meta property="og:description" content="Un espace pensé pour le silence, la création et la présence dans les Ardennes belges.">
+  <meta property="og:image" content="https://samaadi.be/images/og-cover.jpg">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:locale:alternate" content="en_GB">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Samaâdi — Une maison habitée à La Roche-en-Ardenne">
+  <meta name="twitter:description" content="Un espace pensé pour le silence, la création et la présence dans les Ardennes belges.">
+  <meta name="twitter:image" content="https://samaadi.be/images/og-cover.jpg">
+
+  <!-- Données structurées (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Samaâdi",
+    "description": "Maison singulière à La Roche-en-Ardenne, pensée pour le silence, la création et la présence.",
+    "url": "https://samaadi.be",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "La Roche-en-Ardenne",
+      "addressCountry": "BE"
+    },
+    "image": "https://samaadi.be/images/og-cover.jpg"
+  }
+  </script>
+
+  <!-- Feuille de style unique -->
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Pas de Google Analytics, pas de GTM, pas de cookies tiers — conformité RGPD totale -->
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════ -->
+
+  <nav class="nav" id="main-nav" aria-label="Navigation principale">
+    <a href="/" class="nav__logo" aria-label="Samaâdi — Accueil">Samaâdi</a>
+
+    <ul class="nav__links" role="list">
+      <li>
+        <a href="#la-maison" class="nav__link">
+          <span lang="fr">La maison</span>
+          <span lang="en">The house</span>
+        </a>
+      </li>
+      <li>
+        <a href="#lieux" class="nav__link">
+          <span lang="fr">Les espaces</span>
+          <span lang="en">The spaces</span>
+        </a>
+      </li>
+      <li>
+        <a href="#ardennes" class="nav__link">
+          <span lang="fr">Ardennes</span>
+          <span lang="en">Ardennes</span>
+        </a>
+      </li>
+      <li>
+        <a href="blog/" class="nav__link">
+          <span lang="fr">Journal</span>
+          <span lang="en">Journal</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav__lang" aria-label="Choix de la langue">
+      <button class="nav__lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Version française">FR</button>
+      <span class="nav__lang-sep">·</span>
+      <button class="nav__lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English version">EN</button>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════
+       HERO — Photo pleine hauteur
+  ══════════════════════════════════════════════ -->
+
+  <section class="hero" aria-label="Samaâdi">
+    <div class="hero__bg">
+      <picture>
+        <source srcset="images/salle-de-bain.webp" type="image/webp">
+        <img
+          src="images/salle-de-bain.png"
+          alt="Samaâdi — La salle de bain en onyx doré rétroéclairé, La Roche-en-Ardenne"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </picture>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">
+        <span lang="fr">La Roche-en-Ardenne, Belgique</span>
+        <span lang="en">La Roche-en-Ardenne, Belgium</span>
+      </p>
+      <h1 class="hero__title">
+        <span lang="fr">Une maison<br>pour habiter<br>le silence.</span>
+        <span lang="en">A house<br>made for<br>quiet living.</span>
+      </h1>
+      <p class="hero__subtitle">
+        <span lang="fr">Je l'ai construite comme on écrit un premier livre — avec l'intuition que quelque chose d'essentiel allait prendre forme.</span>
+        <span lang="en">I built it the way you write a first book — trusting that something essential was taking shape.</span>
+      </p>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span class="hero__scroll-label">Scroll</span>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       INTRO — Qui est Samaâdi
+  ══════════════════════════════════════════════ -->
+
+  <section class="section section--cream" id="la-maison" aria-labelledby="intro-title">
+    <div class="container--md">
+      <p class="section-label">
+        <span lang="fr">La maison</span>
+        <span lang="en">The house</span>
+      </p>
+
+      <h2 class="heading-xl" id="intro-title">
+        <span lang="fr">Ce n'est pas une adresse.<br>C'est un état d'esprit.</span>
+        <span lang="en">Not an address.<br>A state of mind.</span>
+      </h2>
+
+      <div class="gold-line mt-8 mb-8"></div>
+
+      <p class="body-lg" style="max-width: 680px;">
+        <span lang="fr">
+          Samaâdi est une maison que j'ai choisie, transformée, habitée. Elle est nichée dans les Ardennes belges, à La Roche-en-Ardenne — là où la rivière Ourthe serpente entre les falaises, et où le temps ralentit naturellement.
+        </span>
+        <span lang="en">
+          Samaâdi is a house I chose, transformed, and made my own. It sits in the Belgian Ardennes, in La Roche-en-Ardenne — where the Ourthe river winds between cliffs, and where time slows down on its own.
+        </span>
+      </p>
+
+      <p class="body-lg mt-6" style="max-width: 680px;">
+        <span lang="fr">
+          J'y vis, j'y travaille, j'y pense. Chaque recoin a été pensé pour que la beauté ne soit jamais un effort — elle est simplement là, dans la lumière du matin sur le bois clair, dans le silence des pierres anciennes.
+        </span>
+        <span lang="en">
+          I live here, work here, think here. Every corner was designed so that beauty requires no effort — it simply is, in the morning light on pale wood, in the silence of old stone.
+        </span>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       PHOTO PLEINE LARGEUR — Première immersion
+  ══════════════════════════════════════════════ -->
+
+  <div class="photo-full photo-full--tall" role="img" aria-label="Samaâdi — Salle à manger">
+    <picture>
+      <source srcset="images/salle-a-manger.webp" type="image/webp">
+      <img
+        src="images/salle-a-manger.png"
+        alt="La salle à manger de Samaâdi — table ronde en chêne, pendentif ambre, mur en pierre de taille rétroéclairé"
+        loading="lazy"
+      >
+    </picture>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       SPLIT — L'histoire
+  ══════════════════════════════════════════════ -->
+
+  <section class="section section--cream" aria-labelledby="histoire-title">
+    <div class="container">
+      <div class="split">
+        <div class="split__text">
+          <p class="section-label">
+            <span lang="fr">L'histoire</span>
+            <span lang="en">The story</span>
+          </p>
+          <h2 class="heading-lg" id="histoire-title">
+            <span lang="fr">J'ai cherché un endroit où la beauté soit une évidence.</span>
+            <span lang="en">I was looking for a place where beauty is obvious.</span>
+          </h2>
+          <div class="gold-line mt-8 mb-8"></div>
+          <p class="body mt-6">
+            <span lang="fr">
+              Entrepreneur, on vit souvent dans l'urgence. Les projets s'enchaînent, les décisions s'accumulent, et on oublie de regarder par la fenêtre. Samaâdi est née de cette conviction : on crée mieux quand on est bien.
+            </span>
+            <span lang="en">
+              As an entrepreneur, you often live in urgency. Projects pile up, decisions accumulate, and you forget to look out the window. Samaâdi was born from one conviction: you create better when you feel good.
+            </span>
+          </p>
+          <p class="body mt-4">
+            <span lang="fr">
+              J'ai trouvé cette maison par hasard — ou par nécessité — et j'y ai mis tout ce que j'aime. Des matières naturelles, des objets qui ont une histoire, des lumières qui changent avec les heures.
+            </span>
+            <span lang="en">
+              I found this house by chance — or by necessity — and I put everything I love into it. Natural materials, objects with stories, light that changes with the hours.
+            </span>
+          </p>
+        </div>
+
+        <div class="split__photo split__photo--portrait">
+          <picture>
+            <source srcset="images/chambre.webp" type="image/webp">
+            <img
+              src="images/chambre.png"
+              alt="La chambre de Samaâdi — arche en pierre de taille rétroéclairée, luminaires à motifs, poutres apparentes"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       GALERIE MOSAÏQUE — Les espaces
+  ══════════════════════════════════════════════ -->
+
+  <section class="section section--sand" id="lieux" aria-labelledby="espaces-title">
+    <div class="container">
+      <div class="text-center mb-16">
+        <p class="section-label" style="justify-content: center;">
+          <span lang="fr">Les espaces</span>
+          <span lang="en">The spaces</span>
+        </p>
+        <h2 class="heading-xl" id="espaces-title">
+          <span lang="fr">Chaque pièce a son propre silence.</span>
+          <span lang="en">Every room has its own silence.</span>
+        </h2>
+      </div>
+
+      <!-- Galerie mosaïque — photos portrait -->
+      <div class="mosaic mosaic--3 mosaic--portrait">
+        <div class="mosaic__item">
+          <picture>
+            <source srcset="images/chambre.webp" type="image/webp">
+            <img
+              src="images/chambre.png"
+              alt="La chambre de Samaâdi — lumières organiques, arche en pierre, linge de lin"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+        <div class="mosaic__item">
+          <picture>
+            <source srcset="images/salle-de-bain.webp" type="image/webp">
+            <img
+              src="images/salle-de-bain.png"
+              alt="La salle de bain de Samaâdi — onyx rétroéclairé, douche à l'italienne, mobilier suspendu"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+        <div class="mosaic__item">
+          <picture>
+            <source srcset="images/salle-a-manger.webp" type="image/webp">
+            <img
+              src="images/salle-a-manger.png"
+              alt="La salle à manger de Samaâdi — table ronde en chêne, Samaâdi logo sur MacBook"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+      </div>
+
+      <!-- Description espaces -->
+      <div class="details-grid mt-16">
+        <div class="detail">
+          <p class="detail__label">
+            <span lang="fr">La chambre</span>
+            <span lang="en">The bedroom</span>
+          </p>
+          <p class="detail__value">
+            <span lang="fr">La cathédrale du sommeil</span>
+            <span lang="en">The sleep cathedral</span>
+          </p>
+          <p class="detail__desc">
+            <span lang="fr">Arche en pierre de taille rétroéclairée, poutres de chêne apparent, luminaires sculptés qui projettent de la dentelle sur les murs. Le sommeil devient une cérémonie.</span>
+            <span lang="en">Backlit stone arch, exposed oak beams, sculpted pendants casting lace-like light on the walls. Sleep becomes a ceremony.</span>
+          </p>
+        </div>
+
+        <div class="detail">
+          <p class="detail__label">
+            <span lang="fr">La salle de bain</span>
+            <span lang="en">The bathroom</span>
+          </p>
+          <p class="detail__value">
+            <span lang="fr">L'onyx qui respire</span>
+            <span lang="en">The breathing onyx</span>
+          </p>
+          <p class="detail__desc">
+            <span lang="fr">Dalle d'onyx naturel rétroéclairée en colonne dans la douche à l'italienne. Miroir ovale flottant, robinetterie noire mate, mobilier suspendu sur plateau bois massif.</span>
+            <span lang="en">Natural backlit onyx slab in the walk-in shower. Floating oval mirror, matte black fittings, suspended vanity on solid wood top.</span>
+          </p>
+        </div>
+
+        <div class="detail">
+          <p class="detail__label">
+            <span lang="fr">La cuisine</span>
+            <span lang="en">The kitchen</span>
+          </p>
+          <p class="detail__value">
+            <span lang="fr">L'atelier du quotidien</span>
+            <span lang="en">The daily workshop</span>
+          </p>
+          <p class="detail__desc">
+            <span lang="fr">Façades blanches laquées, plan de travail anthracite, hotte noire intégrée, équipements Zanussi encastrés. Équipée pour cuisiner avec plaisir — la table ronde en chêne attend juste en face.</span>
+            <span lang="en">Lacquered white fronts, anthracite worktop, integrated black extractor, built-in Zanussi appliances. Equipped for real cooking — the round oak table is right across the room.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       PHOTO PLEINE LARGEUR — Nuit / ambiance sombre
+  ══════════════════════════════════════════════ -->
+
+  <div class="photo-full" role="img" aria-label="Samaâdi — Cuisine">
+    <picture>
+      <source srcset="images/cuisine.webp" type="image/webp">
+      <img
+        src="images/cuisine.png"
+        alt="La cuisine de Samaâdi — façades blanches mates, plan de travail anthracite, éclairage LED sous les meubles"
+        loading="lazy"
+      >
+    </picture>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       CITATION — Section sombre
+  ══════════════════════════════════════════════ -->
+
+  <section class="section section--chene frame-inset" aria-label="Citation">
+    <div class="container--sm">
+      <div class="quote">
+        <p class="quote__text">
+          <span lang="fr">
+            « J'ai voulu un endroit où je pourrais penser sans effort. Où la beauté ne réclame rien. »
+          </span>
+          <span lang="en">
+            "I wanted a place where thinking would be effortless. Where beauty asks nothing of you."
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       ARDENNES — Le territoire
+  ══════════════════════════════════════════════ -->
+
+  <section class="section section--cream" id="ardennes" aria-labelledby="ardennes-title">
+    <div class="container">
+      <div class="split split--reverse">
+        <div class="split__text">
+          <p class="section-label">
+            <span lang="fr">Le territoire</span>
+            <span lang="en">The land</span>
+          </p>
+          <h2 class="heading-lg" id="ardennes-title">
+            <span lang="fr">La Roche-en-Ardenne — là où l'horizon respire.</span>
+            <span lang="en">La Roche-en-Ardenne — where the horizon breathes.</span>
+          </h2>
+          <div class="gold-line mt-8 mb-8"></div>
+          <p class="body mt-6">
+            <span lang="fr">
+              Les Ardennes belges ont quelque chose d'intemporel. Les forêts de pins, la rivière, les falaises calcaires — tout ici pousse à ralentir. La Roche-en-Ardenne est un village qui se raconte à pied, en une après-midi.
+            </span>
+            <span lang="en">
+              The Belgian Ardennes have something timeless about them. Pine forests, the river, limestone cliffs — everything here pushes you to slow down. La Roche-en-Ardenne is a village you discover on foot, in an afternoon.
+            </span>
+          </p>
+          <p class="body mt-4">
+            <span lang="fr">
+              Samaâdi est à deux heures de Bruxelles, à quelques minutes du centre. Mais une fois à l'intérieur, la ville n'existe plus.
+            </span>
+            <span lang="en">
+              Samaâdi is two hours from Brussels, minutes from the center. But once inside, the city no longer exists.
+            </span>
+          </p>
+        </div>
+
+        <div class="split__photo split__photo--landscape">
+          <picture>
+            <source srcset="images/cuisine.webp" type="image/webp">
+            <img
+              src="images/cuisine.png"
+              alt="La cuisine de Samaâdi — atelier quotidien avec équipements haut de gamme Zanussi"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       GALERIE MOSAÏQUE — Extérieur / territoire
+  ══════════════════════════════════════════════ -->
+
+  <section class="section section--sand" aria-label="Extérieur et territoire">
+    <div class="container">
+      <div class="mosaic mosaic--asymmetric">
+        <div class="mosaic__item" style="aspect-ratio: 4/3;">
+          <picture>
+            <source srcset="images/salle-a-manger.webp" type="image/webp">
+            <img
+              src="images/salle-a-manger.png"
+              alt="La salle à manger de Samaâdi — ambiance feutrée, bois naturel et pierre"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+        <div class="mosaic mosaic--2" style="gap: 12px;">
+          <div class="mosaic__item" style="aspect-ratio: 3/4;">
+            <picture>
+              <source srcset="images/chambre.webp" type="image/webp">
+              <img
+                src="images/chambre.png"
+                alt="La chambre — projection lumineuse en dentelle dorée sur les murs"
+                loading="lazy"
+              >
+            </picture>
+          </div>
+          <div class="mosaic__item" style="aspect-ratio: 3/4;">
+            <picture>
+              <source srcset="images/salle-de-bain.webp" type="image/webp">
+              <img
+                src="images/salle-de-bain.png"
+                alt="La salle de bain — mur en onyx naturel, miroir ovale rétroéclairé"
+                loading="lazy"
+              >
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       JOURNAL — Aperçu du blog
+  ══════════════════════════════════════════════ -->
+
+  <section class="section section--cream" aria-labelledby="journal-title">
+    <div class="container">
+      <div class="text-center mb-16">
+        <p class="section-label" style="justify-content: center;">
+          <span lang="fr">Journal</span>
+          <span lang="en">Journal</span>
+        </p>
+        <h2 class="heading-xl" id="journal-title">
+          <span lang="fr">Ce que je construis, ce que je vis.</span>
+          <span lang="en">What I build, what I live.</span>
+        </h2>
+        <div class="gold-line gold-line--center mt-8"></div>
+        <p class="body mt-6" style="max-width: 560px; margin-left: auto; margin-right: auto;">
+          <span lang="fr">J'écris sur Samaâdi — les objets que je choisis, les matières que j'explore, les moments de travail et de repos dans cette maison.</span>
+          <span lang="en">I write about Samaâdi — the objects I choose, the materials I explore, moments of work and rest in this house.</span>
+        </p>
+      </div>
+
+      <!-- Les articles récents seront insérés ici dynamiquement ou à la main -->
+      <div id="recent-posts" class="details-grid">
+        <!-- Articles chargés via blog/index.html ou ajoutés manuellement -->
+        <article class="detail">
+          <p class="detail__label">
+            <span lang="fr">Café &amp; matin</span>
+            <span lang="en">Coffee &amp; morning</span>
+          </p>
+          <h3 class="detail__value">
+            <a href="blog/machine-cafe-philips-s5400/" style="color: inherit;">
+              <span lang="fr">La Philips Series 5400 — le rituel du matin à Samaâdi</span>
+              <span lang="en">The Philips Series 5400 — Samaâdi's morning ritual</span>
+            </a>
+          </h3>
+          <p class="detail__desc">
+            <span lang="fr">Pourquoi j'ai choisi cette machine, comment elle s'intègre dans le décor et ce qu'elle change au début de journée.</span>
+            <span lang="en">Why I chose this machine, how it fits the space, and what it changes about the start of a day.</span>
+          </p>
+        </article>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="blog/" class="body-sm" style="color: var(--amber); letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; font-weight: 600; border-bottom: 1px solid var(--amber); padding-bottom: 2px;">
+          <span lang="fr">Lire le journal →</span>
+          <span lang="en">Read the journal →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+
+  <footer class="footer" role="contentinfo">
+    <div class="container--sm">
+      <p class="footer__logo">Samaâdi</p>
+      <p class="footer__tagline">
+        <span lang="fr">La parenthèse habitée</span>
+        <span lang="en">The inhabited pause</span>
+      </p>
+      <div class="footer__location">
+        <span lang="fr">La Roche-en-Ardenne</span>
+        <span lang="en">La Roche-en-Ardenne</span>
+        <span class="footer__sep"></span>
+        <span>Belgique</span>
+        <span class="footer__sep"></span>
+        <span>samaadi.be</span>
+      </div>
+      <p class="footer__bottom">
+        © 2024 Samaâdi —
+        <span lang="fr">Tous droits réservés</span>
+        <span lang="en">All rights reserved</span>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════
+       SCRIPTS — Navigation + i18n (zéro dépendance externe)
+  ══════════════════════════════════════════════ -->
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
