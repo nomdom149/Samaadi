@@ -589,6 +589,10 @@ ul, ol {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.mosaic--4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .mosaic--asymmetric {
   grid-template-columns: 3fr 2fr;
 }
@@ -885,7 +889,8 @@ body.lang-en span[lang="en"] { display: inline; }
     direction: ltr;
   }
   .mosaic--2,
-  .mosaic--3 {
+  .mosaic--3,
+  .mosaic--4 {
     grid-template-columns: 1fr 1fr;
   }
   .mosaic--asymmetric {
@@ -918,6 +923,7 @@ body.lang-en span[lang="en"] { display: inline; }
 @media (max-width: 480px) {
   .mosaic--2,
   .mosaic--3,
+  .mosaic--4,
   .mosaic--asymmetric {
     grid-template-columns: 1fr;
   }
