@@ -41,7 +41,7 @@
           "url": "https://samaadi.be"
         },
         "datePublished": "2024-11-01T08:00:00+01:00",
-        "dateModified": "2026-11-16T00:00:00+01:00",
+        "dateModified": "2026-11-17T00:00:00+01:00",
         "mainEntityOfPage": "https://samaadi.be/blog/machine-cafe-philips-s5400/"
       },
       {
@@ -105,49 +105,51 @@
       display: flex;
       align-items: center;
       gap: var(--space-4);
+      flex-wrap: wrap;
       margin-bottom: var(--space-8);
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-    }
-
-    .article-meta .sep {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: var(--amber);
-      opacity: 0.5;
     }
 
     .article-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
       color: var(--amber);
+    }
+
+    .article-meta .sep::before {
+      content: '·';
+      color: var(--sand);
+      margin: 0 var(--space-1);
+    }
+
+    .article-meta time,
+    .article-meta span:not(.article-tag):not(.sep) {
+      font-size: 12px;
+      color: var(--ink-muted);
+      letter-spacing: 0.06em;
     }
 
     .article-title {
       font-family: var(--font-display);
-      font-size: clamp(32px, 4vw, 52px);
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1.1;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 600;
+      line-height: 1.15;
       color: var(--ink);
-      margin-bottom: var(--space-6);
+      margin-bottom: var(--space-8);
     }
 
     .article-lead {
-      font-size: 19px;
-      font-weight: 300;
-      line-height: 1.75;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.7;
       color: var(--ink-light);
       max-width: 680px;
-      border-left: 2px solid var(--amber);
-      padding-left: var(--space-6);
     }
 
     .article-cover {
       width: 100%;
-      max-height: 60vh;
+      max-height: 540px;
       overflow: hidden;
       margin-bottom: var(--space-16);
     }
@@ -156,7 +158,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 30%;
+      display: block;
     }
 
     .article-body {
@@ -369,8 +371,18 @@
   <nav class="nav scrolled" id="main-nav" aria-label="Navigation">
     <a href="/" class="nav__logo" style="color: var(--ink);">Samaâdi</a>
     <ul class="nav__links" role="list">
-      <li><a href="/#la-maison" class="nav__link" style="color: var(--ink-muted);">La maison</a></li>
-      <li><a href="/blog/" class="nav__link" style="color: var(--amber);">Journal</a></li>
+      <li>
+        <a href="/#la-maison" class="nav__link" style="color: var(--ink-muted);">
+          <span lang="fr">La maison</span>
+          <span lang="en">The house</span>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/" class="nav__link" style="color: var(--amber);">
+          <span lang="fr">Journal</span>
+          <span lang="en">Journal</span>
+        </a>
+      </li>
     </ul>
     <div class="nav__lang">
       <button class="nav__lang-btn active" id="btn-fr" onclick="setLang('fr')" style="color: var(--amber);">FR</button>
@@ -385,19 +397,30 @@
     <!-- En-tête de l'article -->
     <header class="article-header">
       <div class="article-meta">
-        <span class="article-tag">Café &amp; matin</span>
+        <span class="article-tag">
+          <span lang="fr">Café &amp; matin</span>
+          <span lang="en">Coffee &amp; morning</span>
+        </span>
         <span class="sep"></span>
-        <time datetime="2024-11-01">1 novembre 2024</time>
+        <time datetime="2024-11-01">
+          <span lang="fr">1 novembre 2024</span>
+          <span lang="en">November 1, 2024</span>
+        </time>
         <span class="sep"></span>
-        <span>8 min de lecture</span>
+        <span>
+          <span lang="fr">8 min de lecture</span>
+          <span lang="en">8 min read</span>
+        </span>
       </div>
 
       <h1 class="article-title">
-        La Philips Series 5400,<br>le rituel du café du matin à Samaâdi
+        <span lang="fr">La Philips Series 5400,<br>le rituel du café du matin à Samaâdi</span>
+        <span lang="en">The Philips Series 5400,<br>Samaâdi's morning coffee ritual</span>
       </h1>
 
       <p class="article-lead">
-        J'ai longtemps hésité avant de choisir une machine à café pour Samaâdi. Par exigence, précisément. Dans cette maison, chaque objet mérite sa place. Voici pourquoi la Series 5400 a gagné la sienne.
+        <span lang="fr">J'ai longtemps hésité avant de choisir une machine à café pour Samaâdi. Par exigence, précisément. Dans cette maison, chaque objet mérite sa place. Voici pourquoi la Series 5400 a gagné la sienne.</span>
+        <span lang="en">I took a long time choosing a coffee machine for Samaâdi. Out of exacting standards, precisely. In this house, every object earns its place. Here is why the Series 5400 earned its.</span>
       </p>
     </header>
 
@@ -415,22 +438,29 @@
     <div class="article-body">
 
       <p>
-        Le matin à Samaâdi commence toujours par la même chose : le bruit du broyeur, l'odeur du café fraîchement moulu qui se répand dans la cuisine, la lumière qui entre par la fenêtre. Ce rituel, je l'ai construit autour d'une machine : la <strong>Philips Series 5400 LatteGo</strong>.
+        <span lang="fr">Le matin à Samaâdi commence toujours par la même chose : le bruit du broyeur, l'odeur du café fraîchement moulu qui se répand dans la cuisine, la lumière qui entre par la fenêtre. Ce rituel, je l'ai construit autour d'une machine : la <strong>Philips Series 5400 LatteGo</strong>.</span>
+        <span lang="en">Mornings at Samaâdi always begin the same way: the sound of the grinder, the scent of freshly ground coffee spreading through the kitchen, light coming through the window. I built this ritual around one machine: the <strong>Philips Series 5400 LatteGo</strong>.</span>
       </p>
 
       <p>
-        Cet article est un premier retour d'usage, dans une maison où l'esthétique compte autant que la fonctionnalité. Aucun partenariat, aucune rémunération.
+        <span lang="fr">Cet article est un premier retour d'usage, dans une maison où l'esthétique compte autant que la fonctionnalité. Aucun partenariat, aucune rémunération.</span>
+        <span lang="en">This article is an honest first impression from a house where aesthetics matter as much as function. No partnership, no compensation.</span>
       </p>
 
 
-      <h2>Pourquoi une machine grain-à-grain à Samaâdi</h2>
+      <h2>
+        <span lang="fr">Pourquoi une machine grain-à-grain à Samaâdi</span>
+        <span lang="en">Why a bean-to-cup machine at Samaâdi</span>
+      </h2>
 
       <p>
-        La première exigence était simple : pas de capsules. Je voulais un café que je pouvais tracer, des grains que je choisis, moulus à la demande, sans déchet. Dans une maison pensée pour la présence et la lenteur, une capsule plastique aurait été une contradiction.
+        <span lang="fr">La première exigence était simple : pas de capsules. Je voulais un café que je pouvais tracer, des grains que je choisis, moulus à la demande, sans déchet. Dans une maison pensée pour la présence et la lenteur, une capsule plastique aurait été une contradiction.</span>
+        <span lang="en">The first requirement was simple: no capsules. I wanted coffee I could trace — beans I choose, ground on demand, without waste. In a house designed for presence and slowness, a plastic pod would have been a contradiction.</span>
       </p>
 
       <p>
-        La deuxième exigence : la machine devait être belle, ou au moins discrète. La Series 5400 dans son coloris noir mat s'intègre parfaitement au plan de travail en bois sombre de la cuisine de Samaâdi. Elle ne crie pas, elle existe.
+        <span lang="fr">La deuxième exigence : la machine devait être belle, ou au moins discrète. La Series 5400 dans son coloris noir mat s'intègre parfaitement au plan de travail en bois sombre de la cuisine de Samaâdi. Elle ne crie pas, elle existe.</span>
+        <span lang="en">The second requirement: the machine had to be beautiful, or at least unobtrusive. The Series 5400 in matte black fits perfectly on the dark wood worktop of Samaâdi's kitchen. It doesn't announce itself — it simply belongs.</span>
       </p>
 
       <figure class="article-img">
@@ -439,26 +469,41 @@
           alt="La Philips Series 5400 intégrée dans la cuisine de Samaâdi"
           loading="lazy"
         >
-        <figcaption>Dans la cuisine de Samaâdi, la machine s'efface dans le décor.</figcaption>
+        <figcaption>
+          <span lang="fr">Dans la cuisine de Samaâdi, la machine s'efface dans le décor.</span>
+          <span lang="en">In Samaâdi's kitchen, the machine fades quietly into the setting.</span>
+        </figcaption>
       </figure>
 
 
-      <h2>Ce que j'utilise vraiment</h2>
+      <h2>
+        <span lang="fr">Ce que j'utilise vraiment</span>
+        <span lang="en">What I actually use</span>
+      </h2>
 
-      <h3>L'espresso du matin</h3>
+      <h3>
+        <span lang="fr">L'espresso du matin</span>
+        <span lang="en">The morning espresso</span>
+      </h3>
 
       <p>
-        Je commence la journée avec un espresso simple : 7g de café, 30ml d'eau à 92°C. La Series 5400 le produit en moins de 30 secondes, avec une crema consistante. Le broyeur céramique est plus silencieux que les broyeurs en acier, et dans une maison où le silence est une valeur, c'est un critère à part entière.
+        <span lang="fr">Je commence la journée avec un espresso simple : 7g de café, 30ml d'eau à 92°C. La Series 5400 le produit en moins de 30 secondes, avec une crema consistante. Le broyeur céramique est plus silencieux que les broyeurs en acier, et dans une maison où le silence est une valeur, c'est un critère à part entière.</span>
+        <span lang="en">I start the day with a simple espresso: 7g of coffee, 30ml of water at 92°C. The Series 5400 delivers it in under 30 seconds, with a consistent crema. The ceramic grinder is quieter than steel grinders, and in a house where silence is a value, that is a criterion in its own right.</span>
       </p>
 
-      <h3>Le cappuccino de l'après-midi</h3>
+      <h3>
+        <span lang="fr">Le cappuccino de l'après-midi</span>
+        <span lang="en">The afternoon cappuccino</span>
+      </h3>
 
       <p>
-        Le système <strong>LatteGo</strong> est la raison principale pour laquelle j'ai choisi cette machine plutôt qu'une autre dans la gamme. La mousse de lait se forme dans un réservoir en deux parties qui se sépare et passe directement au lave-vaisselle, sans tube à démonter.
+        <span lang="fr">Le système <strong>LatteGo</strong> est la raison principale pour laquelle j'ai choisi cette machine plutôt qu'une autre dans la gamme. La mousse de lait se forme dans un réservoir en deux parties qui se sépare et passe directement au lave-vaisselle, sans tube à démonter.</span>
+        <span lang="en">The <strong>LatteGo</strong> system is the main reason I chose this machine over others in the range. The milk foam forms in a two-part container that separates and goes straight into the dishwasher — no tube to dismantle.</span>
       </p>
 
       <p>
-        C'est un détail qui change tout au quotidien. Le nettoyage prend 15 secondes. Dans une maison où je veux le moins de friction possible, c'est décisif.
+        <span lang="fr">C'est un détail qui change tout au quotidien. Le nettoyage prend 15 secondes. Dans une maison où je veux le moins de friction possible, c'est décisif.</span>
+        <span lang="en">That detail changes everything in daily use. Cleaning takes 15 seconds. In a house where I want as little friction as possible, that is decisive.</span>
       </p>
 
       <figure class="article-img">
@@ -470,29 +515,42 @@
             loading="lazy"
           >
         </picture>
-        <figcaption>12 boissons au choix, du ristretto au flat white — sans capsule, sans compromis.</figcaption>
+        <figcaption>
+          <span lang="fr">12 boissons au choix, du ristretto au flat white — sans capsule, sans compromis.</span>
+          <span lang="en">12 drinks to choose from, ristretto to flat white — no capsule, no compromise.</span>
+        </figcaption>
       </figure>
 
 
-      <h2>Ce que la Series 5400 fait moins bien</h2>
+      <h2>
+        <span lang="fr">Ce que la Series 5400 fait moins bien</span>
+        <span lang="en">Where the Series 5400 falls short</span>
+      </h2>
 
       <p>
-        Je serais malhonnête de ne pas le mentionner : le réservoir d'eau (1,8L) est un peu juste pour une maison qui reçoit plusieurs personnes. Il faut le remplir tous les jours ou presque.
+        <span lang="fr">Je serais malhonnête de ne pas le mentionner : le réservoir d'eau (1,8L) est un peu juste pour une maison qui reçoit plusieurs personnes. Il faut le remplir tous les jours ou presque.</span>
+        <span lang="en">I would be dishonest not to mention it: the water tank (1.8L) is a little small for a house welcoming several guests. It needs refilling almost every day.</span>
       </p>
 
       <p>
-        Le bac à marc (12 doses) est également relativement petit. Pour un usage quotidien solo, c'est suffisant, mais il faut le vider plus souvent dès que la maison est pleine.
+        <span lang="fr">Le bac à marc (12 doses) est également relativement petit. Pour un usage quotidien solo, c'est suffisant, mais il faut le vider plus souvent dès que la maison est pleine.</span>
+        <span lang="en">The grounds container (12 doses) is also relatively small. For solo daily use it is enough, but it needs emptying more often when the house is full.</span>
       </p>
 
 
-      <h2>Mes premières impressions</h2>
+      <h2>
+        <span lang="fr">Mes premières impressions</span>
+        <span lang="en">My first impressions</span>
+      </h2>
 
       <p>
-        Ce que j'ai apprécié dès les premiers jours : la qualité du café. Un espresso bien extrait, une mousse de lait aérienne, une machine qui fait ce qu'elle promet sans friction. Dans une maison où le matin donne le ton, c'est l'essentiel.
+        <span lang="fr">Ce que j'ai apprécié dès les premiers jours : la qualité du café. Un espresso bien extrait, une mousse de lait aérienne, une machine qui fait ce qu'elle promet sans friction. Dans une maison où le matin donne le ton, c'est l'essentiel.</span>
+        <span lang="en">What struck me from the first days: the quality of the coffee. A well-extracted espresso, an airy milk foam, a machine that delivers on its promises without friction. In a house where mornings set the tone, that is what matters.</span>
       </p>
 
       <p>
-        Pour une maison ou un appartement où le café est un moment plutôt qu'une simple fonction, c'est une machine que je recommande sans hésitation.
+        <span lang="fr">Pour une maison ou un appartement où le café est un moment plutôt qu'une simple fonction, c'est une machine que je recommande sans hésitation.</span>
+        <span lang="en">For a home where coffee is a moment rather than just a function, this is a machine I recommend without hesitation.</span>
       </p>
 
 
@@ -509,9 +567,13 @@
           aria-label="Le rituel du café du matin à Samaâdi — Philips Series 5400 en action"
           title="Le rituel du café grain-à-grain à Samaâdi, Ardennes"
         >
-          Votre navigateur ne prend pas en charge la lecture vidéo.
+          <span lang="fr">Votre navigateur ne prend pas en charge la lecture vidéo.</span>
+          <span lang="en">Your browser does not support video playback.</span>
         </video>
-        <figcaption>Le rituel du matin à Samaâdi, café grain-à-grain avec la Philips Series 5400, La Roche-en-Ardenne.</figcaption>
+        <figcaption>
+          <span lang="fr">Le rituel du matin à Samaâdi, café grain-à-grain avec la Philips Series 5400, La Roche-en-Ardenne.</span>
+          <span lang="en">The morning ritual at Samaâdi, bean-to-cup coffee with the Philips Series 5400, La Roche-en-Ardenne.</span>
+        </figcaption>
       </figure>
 
 
@@ -524,10 +586,14 @@
           loading="lazy"
         >
         <div>
-          <p class="product-card__label">Machine utilisée à Samaâdi</p>
+          <p class="product-card__label">
+            <span lang="fr">Machine utilisée à Samaâdi</span>
+            <span lang="en">Machine used at Samaâdi</span>
+          </p>
           <p class="product-card__name">Philips Series 5400 LatteGo</p>
           <p class="product-card__desc">
-            Machine à café grain-à-grain avec système LatteGo. Broyeur céramique, 12 boissons, nettoyage automatique. Disponible en noir mat ou argent.
+            <span lang="fr">Machine à café grain-à-grain avec système LatteGo. Broyeur céramique, 12 boissons, nettoyage automatique. Disponible en noir mat ou argent.</span>
+            <span lang="en">Bean-to-cup coffee machine with the LatteGo system. Ceramic grinder, 12 drinks, automatic cleaning. Available in matte black or silver.</span>
           </p>
           <a
             href="https://link.amazon/B0g108iwN"
@@ -536,22 +602,30 @@
             target="_blank"
             aria-label="Voir la Philips Series 5400 sur Amazon (lien affilié)"
           >
-            Voir sur Amazon →
+            <span lang="fr">Voir sur Amazon →</span>
+            <span lang="en">View on Amazon →</span>
           </a>
-          <span class="product-card__affil">Lien affilié : cet achat me verse une petite commission, sans coût supplémentaire pour vous.</span>
+          <span class="product-card__affil">
+            <span lang="fr">Lien affilié : cet achat me verse une petite commission, sans coût supplémentaire pour vous.</span>
+            <span lang="en">Affiliate link: this purchase earns me a small commission, at no extra cost to you.</span>
+          </span>
         </div>
       </div>
 
 
       <p>
-        <em>Je continue de noter mes impressions au fil du temps. Si vous avez des questions sur la machine ou sur son usage au quotidien, les commentaires sont ouverts.</em>
+        <span lang="fr"><em>Je continue de noter mes impressions au fil du temps. Si vous avez des questions sur la machine ou sur son usage au quotidien, les commentaires sont ouverts.</em></span>
+        <span lang="en"><em>I keep noting my impressions as time passes. If you have questions about the machine or its everyday use, the comments are open.</em></span>
       </p>
 
     </div><!-- /article-body -->
 
     <!-- Navigation entre articles -->
     <nav class="article-nav" aria-label="Navigation entre articles">
-      <a href="/blog/" class="article-nav__back">← Retour au journal</a>
+      <a href="/blog/" class="article-nav__back">
+        <span lang="fr">← Retour au journal</span>
+        <span lang="en">← Back to journal</span>
+      </a>
     </nav>
 
   </main>
@@ -561,15 +635,25 @@
   <footer class="footer" role="contentinfo">
     <div class="container--sm">
       <p class="footer__logo">Samaâdi</p>
-      <p class="footer__tagline">La parenthèse habitée</p>
+      <p class="footer__tagline">
+        <span lang="fr">La parenthèse habitée</span>
+        <span lang="en">The inhabited pause</span>
+      </p>
       <div class="footer__location">
         <span>La Roche-en-Ardenne</span>
         <span class="footer__sep"></span>
-        <span>Belgique</span>
+        <span>
+          <span lang="fr">Belgique</span>
+          <span lang="en">Belgium</span>
+        </span>
         <span class="footer__sep"></span>
         <span>samaadi.be</span>
       </div>
-      <p class="footer__bottom">© 2024 Samaâdi · Tous droits réservés</p>
+      <p class="footer__bottom">
+        © 2024 Samaâdi ·
+        <span lang="fr">Tous droits réservés</span>
+        <span lang="en">All rights reserved</span>
+      </p>
     </div>
   </footer>
 
