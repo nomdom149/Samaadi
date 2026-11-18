@@ -1031,6 +1031,14 @@ body.lang-en div[lang="en"] { display: revert; }
   .frame-inset::before {
     inset: 16px;
   }
+
+  /* Liseré journal : inset réduit sur tablette */
+  .section--journal::before {
+    inset: 14px;
+  }
+  .section--journal::after {
+    inset: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1070,5 +1078,11 @@ body.lang-en div[lang="en"] { display: revert; }
   }
   .nav {
     padding: var(--space-4) var(--space-5);
+  }
+
+  /* Liseré journal : désactivé sous 480px (trop serré) */
+  .section--journal::before,
+  .section--journal::after {
+    display: none;
   }
 }
