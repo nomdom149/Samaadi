@@ -239,6 +239,20 @@ ul, ol {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  /* Fond discret pour garantir la lisibilité sur toute photo */
+  background: rgba(26, 20, 16, 0.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  transition: background var(--duration-normal) var(--ease-out);
+}
+
+.nav.scrolled .nav__lang {
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0;
 }
 
 .nav__lang-btn {
@@ -250,7 +264,7 @@ ul, ol {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(250, 247, 242, 0.5);
+  color: rgba(250, 247, 242, 0.75);
   transition: color var(--duration-fast) var(--ease-out);
   padding: 0;
 }
@@ -265,7 +279,7 @@ ul, ol {
 }
 
 .nav__lang-sep {
-  color: rgba(250, 247, 242, 0.3);
+  color: rgba(250, 247, 242, 0.4);
   font-size: 10px;
 }
 
@@ -926,12 +940,37 @@ body.lang-en div[lang="en"] { display: revert; }
 }
 
 @media (max-width: 480px) {
-  .mosaic--2,
-  .mosaic--3,
-  .mosaic--4,
+  /* La galerie 4 photos reste en 2×2 sur mobile */
+  .mosaic--4 {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  /* Les photos portrait de la galerie : ratio carré sur mobile pour l'équilibre */
+  .mosaic--portrait .mosaic__item {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* La 2-col s'adapte selon le contexte : reste en 2 si petites photos, sinon 1 */
+  .mosaic--2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  /* La 3-col passe en 2+1 (les 2 premières sur une ligne, la 3e pleine largeur) */
+  .mosaic--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* La section asymétric : les 2 colonnes passent en empilé, mais la grille interne
+     (mosaic--2) garde ses 2 colonnes côte à côte pour équilibrer */
   .mosaic--asymmetric {
     grid-template-columns: 1fr;
+    gap: var(--space-3);
   }
+  .mosaic--asymmetric > .mosaic.mosaic--2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
   .details-grid {
     grid-template-columns: 1fr;
   }
