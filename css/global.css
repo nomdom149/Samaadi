@@ -425,6 +425,94 @@ ul, ol {
 .section--chene  { background: var(--chene); }
 .section--dark   { background: var(--charcoal-deep); }
 
+/* ── Section Journal — fond brun, double liseré doré ── */
+
+.section--journal {
+  background: var(--chene, #3d2410);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Double liseré doré façon cadre de livre */
+.section--journal::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(201, 162, 39, 0.30);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section--journal::after {
+  content: '';
+  position: absolute;
+  inset: 28px;
+  border: 1px solid rgba(201, 162, 39, 0.14);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Halo doré subtil en arrière-plan */
+.section--journal .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Plume SVG avant le titre */
+.journal-plume {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto var(--space-6);
+  opacity: 0.80;
+}
+
+/* Couleurs texte sur fond journal */
+.section--journal .section-label {
+  color: rgba(201, 162, 39, 0.75);
+}
+
+.section--journal .section-label::before {
+  background: rgba(201, 162, 39, 0.75);
+}
+
+.section--journal .heading-xl,
+.section--journal .heading-lg,
+.section--journal .heading-md {
+  color: var(--cream, #faf7f2);
+}
+
+.section--journal .body-lg,
+.section--journal .body,
+.section--journal .body-sm {
+  color: rgba(250, 247, 242, 0.65);
+}
+
+.section--journal .detail__label {
+  color: rgba(201, 162, 39, 0.65);
+}
+
+.section--journal .detail__value,
+.section--journal .detail__value a {
+  color: var(--cream, #faf7f2);
+}
+
+.section--journal .detail__desc {
+  color: rgba(250, 247, 242, 0.60);
+}
+
+/* Séparateur doré adapté */
+.section--journal .gold-line {
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.55), transparent);
+  width: 120px;
+}
+
+/* Lien "Lire le journal" adapté */
+.section--journal a[href="blog/"] {
+  color: rgba(201, 162, 39, 0.90) !important;
+  border-bottom-color: rgba(201, 162, 39, 0.50) !important;
+}
+
 .container {
   max-width: var(--container-lg);
   margin: 0 auto;
