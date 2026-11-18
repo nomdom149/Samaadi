@@ -35,7 +35,7 @@
   <style>
     /* ── Styles spécifiques au blog index ── */
     .blog-header {
-      padding: var(--space-32) 0 var(--space-16);
+      padding: var(--space-32) var(--space-10) var(--space-16);
       text-align: center;
     }
 
@@ -154,15 +154,32 @@
     }
 
     @media (max-width: 768px) {
+      .blog-header {
+        padding: var(--space-20) var(--space-6) var(--space-12);
+      }
       .blog-card--featured {
         flex-direction: column;
       }
       .blog-card--featured .blog-card__img {
+        flex: none;
+        width: 100%;
         min-height: auto;
         aspect-ratio: 4/3;
       }
       .blog-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-6);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .blog-header {
+        padding: var(--space-16) var(--space-5) var(--space-10);
+      }
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+        padding-bottom: var(--space-16);
       }
     }
   </style>
