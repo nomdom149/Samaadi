@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Page d'accueil -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://samaadi.be/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://samaadi.be/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://samaadi.be/"/>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-11-23</lastmod>
   </url>
-
-  <!-- Blog — index -->
   <url>
     <loc>https://samaadi.be/blog/</loc>
     <lastmod>2026-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
-
-  <!-- Articles de blog -->
   <url>
     <loc>https://samaadi.be/blog/machine-cafe-philips-s5400/</loc>
     <lastmod>2026-11-23</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
   </url>
-
-  <!-- NOTE : La page acces-prive/ est volontairement absente du sitemap -->
-
+  <url>
+    <loc>https://samaadi.be/affiliation.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://samaadi.be/conditions-utilisation.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://samaadi.be/mentions-legales.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://samaadi.be/politique-confidentialite.html</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
 </urlset>

@@ -1,36 +1,94 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-BE">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Journal · Samaâdi</title>
+  <title>Journal · Samaâdi, maison à La Roche-en-Ardenne</title>
   <meta name="description" content="Le journal de Samaâdi : ce que je construis, ce que je vis dans cette maison des Ardennes. Objets, matières, rituels, instants de travail et de repos.">
   <meta name="author" content="Samaâdi">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://samaadi.be/blog/">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Samaâdi">
   <meta property="og:url" content="https://samaadi.be/blog/">
   <meta property="og:title" content="Journal — Samaâdi">
   <meta property="og:description" content="Ce que je construis, ce que je vis dans cette maison des Ardennes.">
   <meta property="og:image" content="https://samaadi.be/images/og-cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="La cuisine de Samaâdi, maison à La Roche-en-Ardenne">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:locale:alternate" content="en_GB">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Journal — Samaâdi">
+  <meta name="twitter:description" content="Ce que je construis, ce que je vis dans cette maison des Ardennes.">
+  <meta name="twitter:image" content="https://samaadi.be/images/og-cover.jpg">
+  <meta name="twitter:image:alt" content="La cuisine de Samaâdi, maison à La Roche-en-Ardenne">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Journal Samaâdi",
-    "description": "Le journal de Samaâdi : objets, matières, rituels et instants dans une maison des Ardennes belges.",
-    "url": "https://samaadi.be/blog/",
-    "publisher": {
-      "@type": "Person",
-      "name": "Samaâdi"
-    }
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://samaadi.be/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Journal",
+            "item": "https://samaadi.be/blog/"
+          }
+        ]
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://samaadi.be/blog/#blog",
+        "name": "Journal Samaâdi",
+        "description": "Le journal de Samaâdi : objets, matières, rituels et instants dans une maison des Ardennes belges.",
+        "url": "https://samaadi.be/blog/",
+        "inLanguage": "fr-BE",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://samaadi.be/#organization",
+          "name": "Samaâdi",
+          "url": "https://samaadi.be/"
+        },
+        "dateModified": "2026-11-23",
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "La Philips Series 5400, le rituel du café du matin à Samaâdi",
+            "url": "https://samaadi.be/blog/machine-cafe-philips-s5400/",
+            "datePublished": "2026-11-01",
+            "author": {
+              "@type": "Person",
+              "@id": "https://samaadi.be/#hanane-risayindi",
+              "name": "Hanane Risayindi",
+              "url": "https://hananerisayindi.be"
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
   <link rel="stylesheet" href="../css/global.css">
-  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <style>
     /* ── Styles spécifiques au blog index ── */
@@ -277,7 +335,7 @@
           <a href="machine-cafe-philips-s5400/" class="blog-card__img" tabindex="-1" aria-hidden="true">
             <picture>
               <source srcset="../images/salle-a-manger.webp" type="image/webp">
-              <img
+              <img width="1024" height="1536"
                 src="../images/salle-a-manger.png"
                 alt="La table ronde de Samaâdi avec MacBook et café latte — rituel du matin"
                 loading="lazy"

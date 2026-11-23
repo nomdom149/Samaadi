@@ -58,7 +58,7 @@
     }
 
     // Met à jour l'attribut lang du document pour l'accessibilité
-    document.documentElement.lang = lang;
+    document.documentElement.lang = lang === 'fr' ? 'fr-BE' : 'en';
   }
 
   // Expose globalement pour les onclick inline

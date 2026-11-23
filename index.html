@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-BE">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO primaire -->
   <title>Samaâdi, une maison habitée à La Roche-en-Ardenne</title>
-  <meta name="description" content="Samaâdi est une maison singulière à La Roche-en-Ardenne. Un espace pensé pour le silence, la création et la présence. Je vous raconte ce que j'y construis.">
+  <meta name="description" content="Samaâdi est une maison singulière à La Roche-en-Ardenne. Un espace pensé pour le silence, la création et la présence. Je vous raconte ce que j&#x27;y construis.">
   <meta name="author" content="Samaâdi">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://samaadi.be/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Samaâdi">
   <meta property="og:url" content="https://samaadi.be/">
   <meta property="og:title" content="Samaâdi, une maison habitée à La Roche-en-Ardenne">
   <meta property="og:description" content="Un espace pensé pour le silence, la création et la présence dans les Ardennes belges.">
   <meta property="og:image" content="https://samaadi.be/images/og-cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="La cuisine de Samaâdi, maison à La Roche-en-Ardenne">
   <meta property="og:locale" content="fr_BE">
   <meta property="og:locale:alternate" content="en_GB">
 
@@ -24,21 +30,70 @@
   <meta name="twitter:title" content="Samaâdi, une maison habitée à La Roche-en-Ardenne">
   <meta name="twitter:description" content="Un espace pensé pour le silence, la création et la présence dans les Ardennes belges.">
   <meta name="twitter:image" content="https://samaadi.be/images/og-cover.jpg">
+  <meta name="twitter:image:alt" content="La cuisine de Samaâdi, maison à La Roche-en-Ardenne">
 
   <!-- Données structurées (Schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Samaâdi",
-    "description": "Maison singulière à La Roche-en-Ardenne, pensée pour le silence, la création et la présence.",
-    "url": "https://samaadi.be",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "La Roche-en-Ardenne",
-      "addressCountry": "BE"
-    },
-    "image": "https://samaadi.be/images/og-cover.jpg"
+    "@graph": [
+      {
+        "@type": [
+          "LodgingBusiness",
+          "Organization"
+        ],
+        "@id": "https://samaadi.be/#organization",
+        "name": "Samaâdi",
+        "description": "Maison singulière à La Roche-en-Ardenne, pensée pour le silence, la création et la présence.",
+        "url": "https://samaadi.be/",
+        "image": "https://samaadi.be/images/og-cover.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "La Roche-en-Ardenne",
+          "addressCountry": "BE"
+        },
+        "founder": {
+          "@type": "Person",
+          "@id": "https://samaadi.be/#hanane-risayindi",
+          "name": "Hanane Risayindi",
+          "url": "https://hananerisayindi.be"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://samaadi.be/#website",
+        "url": "https://samaadi.be/",
+        "name": "Samaâdi",
+        "inLanguage": [
+          "fr-BE",
+          "en"
+        ],
+        "publisher": {
+          "@id": "https://samaadi.be/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://samaadi.be/#webpage",
+        "url": "https://samaadi.be/",
+        "name": "Samaâdi, une maison habitée à La Roche-en-Ardenne",
+        "description": "Samaâdi est une maison singulière à La Roche-en-Ardenne. Un espace pensé pour le silence, la création et la présence. Je vous raconte ce que j'y construis.",
+        "isPartOf": {
+          "@id": "https://samaadi.be/#website"
+        },
+        "about": {
+          "@id": "https://samaadi.be/#organization"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://samaadi.be/images/og-cover.jpg",
+          "width": 1200,
+          "height": 630
+        },
+        "inLanguage": "fr-BE",
+        "dateModified": "2026-11-23"
+      }
+    ]
   }
   </script>
 
@@ -46,7 +101,9 @@
   <link rel="stylesheet" href="css/global.css">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Pas de Google Analytics, pas de GTM, pas de cookies tiers — conformité RGPD totale -->
 </head>
@@ -106,7 +163,7 @@
     <div class="hero__bg">
       <picture>
         <source srcset="images/salle-de-bain.webp" type="image/webp">
-        <img
+        <img width="941" height="1672"
           src="images/salle-de-bain.png"
           alt="Samaâdi — La salle de bain en onyx doré rétroéclairé, La Roche-en-Ardenne"
           loading="eager"
@@ -183,7 +240,7 @@
   <div class="photo-full photo-full--tall" role="img" aria-label="Samaâdi — Salle à manger">
     <picture>
       <source srcset="images/salle-a-manger.webp" type="image/webp">
-      <img
+      <img width="1024" height="1536"
         src="images/salle-a-manger.png"
         alt="La salle à manger de Samaâdi — table ronde en chêne, pendentif ambre, mur en pierre de taille rétroéclairé"
         loading="lazy"
@@ -230,7 +287,7 @@
         <div class="split__photo split__photo--portrait">
           <picture>
             <source srcset="images/chambre.webp" type="image/webp">
-            <img
+            <img width="941" height="1672"
               src="images/chambre.png"
               alt="La chambre de Samaâdi — arche en pierre de taille rétroéclairée, luminaires à motifs, poutres apparentes"
               loading="lazy"
@@ -264,7 +321,7 @@
         <div class="mosaic__item">
           <picture>
             <source srcset="images/chambre.webp" type="image/webp">
-            <img
+            <img width="941" height="1672"
               src="images/chambre.png"
               alt="La chambre de Samaâdi — lumières organiques, arche en pierre, linge de lin"
               loading="lazy"
@@ -274,7 +331,7 @@
         <div class="mosaic__item">
           <picture>
             <source srcset="images/salle-de-bain.webp" type="image/webp">
-            <img
+            <img width="941" height="1672"
               src="images/salle-de-bain.png"
               alt="La salle de bain de Samaâdi — onyx rétroéclairé, douche à l'italienne, mobilier suspendu"
               loading="lazy"
@@ -284,7 +341,7 @@
         <div class="mosaic__item">
           <picture>
             <source srcset="images/salle-a-manger.webp" type="image/webp">
-            <img
+            <img width="1024" height="1536"
               src="images/salle-a-manger.png"
               alt="La salle à manger de Samaâdi — table ronde en chêne, Samaâdi logo sur MacBook"
               loading="lazy"
@@ -294,7 +351,7 @@
         <div class="mosaic__item">
           <picture>
             <source srcset="images/habillage.webp" type="image/webp">
-            <img
+            <img width="1200" height="2132"
               src="images/habillage.png"
               alt="L'espace habillage de Samaâdi — veste en denim sous la voûte en pierre"
               loading="lazy"
@@ -361,7 +418,7 @@
   <div class="photo-full" role="img" aria-label="Samaâdi — Cuisine">
     <picture>
       <source srcset="images/cuisine.webp" type="image/webp">
-      <img
+      <img width="1448" height="1086"
         src="images/cuisine.png"
         alt="La cuisine de Samaâdi — façades blanches mates, plan de travail anthracite, éclairage LED sous les meubles"
         loading="lazy"
@@ -428,7 +485,7 @@
         <div class="split__photo split__photo--landscape">
           <picture>
             <source srcset="images/cuisine.webp" type="image/webp">
-            <img
+            <img width="1448" height="1086"
               src="images/cuisine.png"
               alt="La cuisine de Samaâdi — atelier quotidien avec équipements haut de gamme Zanussi"
               loading="lazy"
@@ -450,7 +507,7 @@
         <div class="mosaic__item" style="aspect-ratio: 4/3;">
           <picture>
             <source srcset="images/salle-a-manger.webp" type="image/webp">
-            <img
+            <img width="1024" height="1536"
               src="images/salle-a-manger.png"
               alt="La salle à manger de Samaâdi — ambiance feutrée, bois naturel et pierre"
               loading="lazy"
@@ -461,7 +518,7 @@
           <div class="mosaic__item" style="aspect-ratio: 3/4;">
             <picture>
               <source srcset="images/chambre.webp" type="image/webp">
-              <img
+              <img width="941" height="1672"
                 src="images/chambre.png"
                 alt="La chambre — projection lumineuse en dentelle dorée sur les murs"
                 loading="lazy"
@@ -471,7 +528,7 @@
           <div class="mosaic__item" style="aspect-ratio: 3/4;">
             <picture>
               <source srcset="images/salle-de-bain.webp" type="image/webp">
-              <img
+              <img width="941" height="1672"
                 src="images/salle-de-bain.png"
                 alt="La salle de bain — mur en onyx naturel, miroir ovale rétroéclairé"
                 loading="lazy"

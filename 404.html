@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page introuvable · Samaâdi</title>
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    .nf {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px var(--space-6) var(--space-20);
+      background: var(--charcoal-deep);
+      color: var(--cream);
+    }
+    .nf .heading-xl { color: var(--cream); margin: var(--space-4) 0 0; }
+    .nf .body-lg { max-width: 460px; margin: var(--space-8) auto 0; color: rgba(250, 247, 242, 0.7); }
+    .nf__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: center; margin-top: var(--space-10); }
+    .nf__btn {
+      display: inline-flex; align-items: center; padding: 16px 30px;
+      border: 1px solid rgba(201, 162, 39, 0.65);
+      font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--or);
+      transition: background var(--duration-normal) var(--ease-out), color var(--duration-normal) var(--ease-out);
+    }
+    .nf__btn:hover { background: var(--or); color: var(--chene); }
+    .nf__btn--gold { background: var(--or); color: var(--chene); }
+    .nf__btn--gold:hover { background: var(--cream); border-color: var(--cream); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="main-nav" aria-label="Navigation principale">
+    <a href="/" class="nav__logo" aria-label="Samaâdi — Accueil">Samaâdi</a>
+    <button class="nav__hamburger" id="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="nav-mobile-menu" role="list">
+      <li><a href="/#la-maison" class="nav__link"><span lang="fr">La maison</span><span lang="en">The house</span></a></li>
+      <li><a href="/#lieux" class="nav__link"><span lang="fr">Les espaces</span><span lang="en">The spaces</span></a></li>
+      <li><a href="/#ardennes" class="nav__link"><span lang="fr">Ardennes</span><span lang="en">Ardennes</span></a></li>
+      <li><a href="/blog/" class="nav__link"><span lang="fr">Journal</span><span lang="en">Journal</span></a></li>
+    </ul>
+    <div class="nav__lang" aria-label="Choix de la langue">
+      <button class="nav__lang-btn active" id="btn-fr" onclick="setLang('fr')" aria-label="Version française">FR</button>
+      <span class="nav__lang-sep">·</span>
+      <button class="nav__lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English version">EN</button>
+    </div>
+  </nav>
+
+  <main class="nf section--dark">
+    <p class="section-label">
+      <span lang="fr">Erreur 404</span>
+      <span lang="en">Error 404</span>
+    </p>
+    <h1 class="heading-xl">
+      <span lang="fr">Cette page s'est égarée.</span>
+      <span lang="en">This page has wandered off.</span>
+    </h1>
+    <div class="gold-line gold-line--center mt-8"></div>
+    <p class="body-lg">
+      <span lang="fr">L'adresse contient peut-être une erreur, ou la page n'existe plus. La maison, elle, vous attend à l'accueil.</span>
+      <span lang="en">The address may contain a typo, or the page no longer exists. The house is still waiting for you on the home page.</span>
+    </p>
+    <div class="nf__actions">
+      <a href="/" class="nf__btn nf__btn--gold"><span lang="fr">Retour à l'accueil</span><span lang="en">Back to home</span></a>
+      <a href="/blog/" class="nf__btn"><span lang="fr">Lire le journal</span><span lang="en">Read the journal</span></a>
+    </div>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

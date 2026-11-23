@@ -1,6 +1,20 @@
+# Samaâdi : le site est ouvert aux robots de recherche et aux assistants IA,
+# à l'exception de l'espace privé et des zones techniques.
+
 User-agent: *
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
 Allow: /
 Disallow: /acces-prive/
 Disallow: /reservation/
+Disallow: /api/
 
 Sitemap: https://samaadi.be/sitemap.xml
