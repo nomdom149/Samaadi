@@ -132,10 +132,10 @@
     .hero--article .hero__bg::after {
       background: linear-gradient(
         to top,
-        rgba(16, 12, 8, 0.92) 0%,
-        rgba(16, 12, 8, 0.70) 38%,
-        rgba(16, 12, 8, 0.28) 70%,
-        rgba(16, 12, 8, 0.18) 100%
+        rgba(16, 12, 8, 0.93) 0%,
+        rgba(16, 12, 8, 0.78) 45%,
+        rgba(16, 12, 8, 0.52) 78%,
+        rgba(16, 12, 8, 0.38) 100%
       );
     }
     .hero--article .hero__title {
@@ -460,6 +460,86 @@
     }
     .a-back:hover { color: var(--amber); border-color: var(--amber); }
 
+    /* ── Boutons d'achat (CTA) ── */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: 17px 34px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: background var(--duration-normal) var(--ease-out),
+                  color var(--duration-normal) var(--ease-out),
+                  border-color var(--duration-normal) var(--ease-out),
+                  transform var(--duration-normal) var(--ease-out);
+    }
+    .cta-btn--gold {
+      background: var(--or);
+      color: var(--chene);
+      border: 1px solid var(--or);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    }
+    .cta-btn--gold:hover {
+      background: var(--cream);
+      border-color: var(--cream);
+      transform: translateY(-2px);
+    }
+    .cta-btn--line {
+      color: var(--ink);
+      border: 1px solid var(--amber);
+    }
+    .cta-btn--line:hover {
+      background: var(--amber);
+      color: #fff;
+    }
+    .cta-note {
+      display: block;
+      margin-top: var(--space-4);
+      font-size: 11px;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      color: rgba(250, 247, 242, 0.6);
+    }
+    .hero-cta { margin-top: var(--space-8); }
+
+    /* Bande CTA en milieu d'article */
+    .a-cta {
+      background: var(--cream);
+      padding: var(--space-16) var(--space-10);
+      text-align: center;
+      border-top: 1px solid rgba(201, 162, 39, 0.22);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.22);
+    }
+    .a-cta__label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: var(--space-3);
+    }
+    .a-cta__name {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: var(--space-8);
+    }
+    .a-cta .cta-note {
+      color: var(--ink-muted);
+      margin-top: var(--space-5);
+    }
+
+    /* Navigation mobile : le sélecteur FR/EN respire à droite du logo */
+    @media (max-width: 768px) {
+      .nav__lang { margin-left: var(--space-8); }
+    }
+
     /* ── Responsive ── */
     @media (max-width: 1024px) {
       .a-section { padding: var(--space-20) var(--space-6); }
@@ -480,6 +560,8 @@
       .a-reel { grid-template-columns: 1fr; text-align: center; }
       .a-reel video { max-width: 300px; margin: 0 auto; outline-offset: 8px; }
       .product-wrap { padding: var(--space-16) var(--space-6); }
+      .a-cta { padding: var(--space-12) var(--space-6); }
+      .cta-btn { padding: 16px 26px; }
     }
 
     @media (max-width: 480px) {
@@ -571,6 +653,23 @@
           <span lang="fr">J'ai longtemps hésité avant de choisir une machine à café pour Samaâdi. Par exigence, précisément. Dans cette maison, chaque objet mérite sa place. Voici pourquoi la Series 5400 a gagné la sienne.</span>
           <span lang="en">I took a long time choosing a coffee machine for Samaâdi. Out of exacting standards, precisely. In this house, every object earns its place. Here is why the Series 5400 earned its.</span>
         </p>
+
+        <div class="hero-cta">
+          <a
+            href="https://link.amazon/B0g108iwN"
+            class="cta-btn cta-btn--gold"
+            rel="sponsored noopener noreferrer"
+            target="_blank"
+            aria-label="Acheter la Philips Series 5400 sur Amazon (lien affilié)"
+          >
+            <span lang="fr">Acheter la Philips S5400 maintenant →</span>
+            <span lang="en">Buy the Philips S5400 now →</span>
+          </a>
+          <span class="cta-note">
+            <span lang="fr">Lien affilié, sans coût supplémentaire pour vous.</span>
+            <span lang="en">Affiliate link, at no extra cost to you.</span>
+          </span>
+        </div>
 
         <div class="article-meta">
           <time datetime="2026-11-01">
@@ -766,6 +865,32 @@
     </section>
 
 
+    <!-- ══ CTA 1 ══ -->
+    <section class="a-cta" aria-label="Acheter la Philips Series 5400">
+      <div class="reveal">
+        <p class="a-cta__label">
+          <span lang="fr">Machine utilisée à Samaâdi</span>
+          <span lang="en">Machine used at Samaâdi</span>
+        </p>
+        <p class="a-cta__name">Philips Series 5400 LatteGo</p>
+        <a
+          href="https://link.amazon/B0g108iwN"
+          class="cta-btn cta-btn--line"
+          rel="sponsored noopener noreferrer"
+          target="_blank"
+          aria-label="Acheter la Philips Series 5400 sur Amazon (lien affilié)"
+        >
+          <span lang="fr">Acheter la Philips S5400 maintenant →</span>
+          <span lang="en">Buy the Philips S5400 now →</span>
+        </a>
+        <span class="cta-note">
+          <span lang="fr">Lien affilié, sans coût supplémentaire pour vous.</span>
+          <span lang="en">Affiliate link, at no extra cost to you.</span>
+        </span>
+      </div>
+    </section>
+
+
     <!-- ══ 03 — LES LIMITES ══ -->
     <section class="section section--cream a-section" aria-labelledby="chap-3">
       <div class="a-col">
@@ -851,6 +976,32 @@
     </section>
 
 
+    <!-- ══ CTA 2 ══ -->
+    <section class="a-cta" aria-label="Acheter la Philips Series 5400">
+      <div class="reveal">
+        <p class="a-cta__label">
+          <span lang="fr">Machine utilisée à Samaâdi</span>
+          <span lang="en">Machine used at Samaâdi</span>
+        </p>
+        <p class="a-cta__name">Philips Series 5400 LatteGo</p>
+        <a
+          href="https://link.amazon/B0g108iwN"
+          class="cta-btn cta-btn--line"
+          rel="sponsored noopener noreferrer"
+          target="_blank"
+          aria-label="Acheter la Philips Series 5400 sur Amazon (lien affilié)"
+        >
+          <span lang="fr">Acheter la Philips S5400 maintenant →</span>
+          <span lang="en">Buy the Philips S5400 now →</span>
+        </a>
+        <span class="cta-note">
+          <span lang="fr">Lien affilié, sans coût supplémentaire pour vous.</span>
+          <span lang="en">Affiliate link, at no extra cost to you.</span>
+        </span>
+      </div>
+    </section>
+
+
     <!-- ══ VIDÉO ══ -->
     <section class="section section--dark a-section" aria-label="Vidéo">
       <div class="a-reel">
@@ -909,8 +1060,8 @@
           target="_blank"
           aria-label="Voir la Philips Series 5400 sur Amazon (lien affilié)"
         >
-          <span lang="fr">Voir sur Amazon →</span>
-          <span lang="en">View on Amazon →</span>
+          <span lang="fr">Acheter la Philips S5400 maintenant →</span>
+          <span lang="en">Buy the Philips S5400 now →</span>
         </a>
         <span class="product-card__affil">
           <span lang="fr">Lien affilié : cet achat me verse une petite commission, sans coût supplémentaire pour vous.</span>
