@@ -132,10 +132,10 @@
     .hero--article .hero__bg::after {
       background: linear-gradient(
         to top,
-        rgba(16, 12, 8, 0.93) 0%,
-        rgba(16, 12, 8, 0.78) 45%,
-        rgba(16, 12, 8, 0.52) 78%,
-        rgba(16, 12, 8, 0.38) 100%
+        rgba(16, 12, 8, 0.92) 0%,
+        rgba(16, 12, 8, 0.70) 38%,
+        rgba(16, 12, 8, 0.28) 70%,
+        rgba(16, 12, 8, 0.18) 100%
       );
     }
     .hero--article .hero__title {
@@ -503,7 +503,15 @@
       letter-spacing: 0.02em;
       color: rgba(250, 247, 242, 0.6);
     }
-    .hero-cta { margin-top: var(--space-8); }
+    /* Bouton d'achat du hero : en bas à droite, la photo reste dégagée */
+    .hero--article .hero-cta {
+      position: absolute;
+      right: 112px;
+      bottom: var(--space-24);
+      z-index: 2;
+      text-align: right;
+    }
+    .hero--article .hero__eyebrow { text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55); }
 
     /* Bande CTA en milieu d'article */
     .a-cta {
@@ -535,19 +543,28 @@
       margin-top: var(--space-5);
     }
 
-    /* Navigation mobile : le sélecteur FR/EN respire à droite du logo */
-    @media (max-width: 768px) {
-      .nav__lang { margin-left: var(--space-8); }
-    }
-
     /* ── Responsive ── */
     @media (max-width: 1024px) {
+      .hero--article {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: stretch;
+      }
+      .hero--article .hero__content { padding-bottom: var(--space-8); }
+      .hero--article .hero__scroll { display: none; }
+      .hero--article .hero-cta {
+        position: static;
+        text-align: left;
+        padding: 0 var(--space-8) var(--space-12);
+      }
       .a-section { padding: var(--space-20) var(--space-6); }
       .a-reel { gap: var(--space-12); grid-template-columns: 300px 1fr; }
     }
 
     @media (max-width: 768px) {
-      .hero--article { min-height: 82vh; }
+      .hero--article { min-height: 96vh; }
+      .hero--article .hero-cta { padding: 0 var(--space-6) var(--space-10); }
+      .hero--article .hero-cta .cta-btn { width: 100%; justify-content: center; }
       .hero--article .hero__content { padding-top: 120px; }
       .a-quote { padding: var(--space-16) var(--space-6); }
       .a-figures { padding: var(--space-12) var(--space-6); }
@@ -654,23 +671,6 @@
           <span lang="en">I took a long time choosing a coffee machine for Samaâdi. Out of exacting standards, precisely. In this house, every object earns its place. Here is why the Series 5400 earned its.</span>
         </p>
 
-        <div class="hero-cta">
-          <a
-            href="https://link.amazon/B0g108iwN"
-            class="cta-btn cta-btn--gold"
-            rel="sponsored noopener noreferrer"
-            target="_blank"
-            aria-label="Acheter la Philips Series 5400 sur Amazon (lien affilié)"
-          >
-            <span lang="fr">Acheter la Philips S5400 maintenant →</span>
-            <span lang="en">Buy the Philips S5400 now →</span>
-          </a>
-          <span class="cta-note">
-            <span lang="fr">Lien affilié, sans coût supplémentaire pour vous.</span>
-            <span lang="en">Affiliate link, at no extra cost to you.</span>
-          </span>
-        </div>
-
         <div class="article-meta">
           <time datetime="2026-11-01">
             <span lang="fr">1 novembre 2026</span>
@@ -682,6 +682,23 @@
             <span lang="en">8 min read</span>
           </span>
         </div>
+      </div>
+
+      <div class="hero-cta">
+        <a
+          href="https://link.amazon/B0g108iwN"
+          class="cta-btn cta-btn--gold"
+          rel="sponsored noopener noreferrer"
+          target="_blank"
+          aria-label="Acheter la Philips Series 5400 sur Amazon (lien affilié)"
+        >
+          <span lang="fr">Acheter la Philips S5400 maintenant →</span>
+          <span lang="en">Buy the Philips S5400 now →</span>
+        </a>
+        <span class="cta-note">
+          <span lang="fr">Lien affilié, sans coût supplémentaire pour vous.</span>
+          <span lang="en">Affiliate link, at no extra cost to you.</span>
+        </span>
       </div>
 
       <div class="hero__scroll" aria-hidden="true">
